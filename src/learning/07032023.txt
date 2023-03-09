@@ -1,0 +1,81 @@
+import React, { useState } from "react";
+// import DefaultPropsClass from "./components/props/DefaultPropsClass";
+import DefaultPropsFunction from "./components/props/DefaultPropsFunction";
+// import PassFunction from "./components/props/PassFunction";
+// import PropsChildren from "./components/props/PropsChildren";
+// import PropsToMultiple from "./components/props/PropsToMultiple";
+// import PassingData from "./components/props/PassingData";
+// import CounterClass from "./components/CounterClass";
+// import ChangeState from "./components/ChangeState";
+// import ChangeStateFunc from "./components/ChangeStateFunc";
+// import ProductDisplay from "./components/ProductDisplay";
+// import ProductDisplayFunc from "./components/ProductDisplayFunc";
+// import UseStateHook from "./components/UseStateHook";
+// import Menu from "./components/Menu";
+// import Navbar from "./components/Navbar";
+// import StateObj from "./components/StateObj";
+// import CounterFunction from './components/CounterFunction';
+// import OldValueNewValue from './components/OldValueNewValue';
+// import Faker from "./components/Faker";
+// import ClassChild from "./components/props/ClassChild";
+// import FunctionalChild from "./components/props/FunctionalChild";
+
+const App = () => {
+  // let [state, setState] = useState({
+  //   mernstack: ["html", "css", "js"],
+  // });
+  // let ChangeMyName = username => {
+  //   return username;
+  // };
+  return (
+    <div id="app">
+      <section>
+        {/* <Navbar /> */}
+        {/* <Menu /> */}
+      </section>
+      {/* <StateObj/> */}
+      {/* <UseStateHook/> */}
+      {/* <ProductDisplay/> */}
+      {/* <ProductDisplayFunc/> */}
+      {/* <ChangeState/> */}
+      {/* <ChangeStateFunc/> */}
+      {/* <CounterClass/> */}
+      {/* <CounterFunction/> */}
+      {/* <OldValueNewValue/> */}
+      {/* <Faker/> */}
+      {/* <ClassChild username="Goku" /> */}
+      {/* <FunctionalChild username="Levi Ackerman"/> */}
+      {/* <PassingData
+        username="Diwakar"
+        salary={100}
+        isMarried={false}
+        isUndefined={undefined}
+        isNull={null}
+        languages={["Hindi", "English", "Maithli"]}
+        courses={{frontEnd:["Html","Css","Js"],backEnd:["nodejs","Express"],dataBase:["sql","mongoDb"]}}
+      /> */}
+      {/* <PropsToMultiple userDetails={{name:"Shivansh",company:"Child",skill:["abcd","1234","A for apple"]}} />
+      <PropsToMultiple userDetails={{name:"Raju",company:"HP",skill:["chori","chakari","loot maar"]}} />
+      <PropsToMultiple userDetails={{name:"Shaam",company:"Hp",skill:["bhola-bhala","sidha-sada","sharif"]}} />
+      <PropsToMultiple userDetails={{name:"Babu",company:"Hp",skill:["chasma","natak mandli","draupadi ki saari"]}} /> */}
+      {/* <PropsChildren> 
+        <h1>Bruce Wayne</h1>
+        <p>Batman</p>
+        <p>DC</p>
+      </PropsChildren>
+      <PropsChildren> 
+        <h1>Peter Parker</h1>
+        <p>Spiderman</p>
+        <p>Marvel</p>
+      </PropsChildren> */}
+
+      {/* <PassFunction ChangeMyName={ChangeMyName} state={state} /> */}
+      {/* <DefaultPropsClass username="Diwakar" company="CGI"/>
+      <DefaultPropsClass username="Tiku"/> */}
+      <DefaultPropsFunction username="Rahul" company="IDBI"/>
+      <DefaultPropsFunction username="Rahul" />
+    </div>
+  );
+};
+
+export default App;

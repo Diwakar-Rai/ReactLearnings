@@ -1,0 +1,52 @@
+import React, { useState } from "react";
+import ConditionalRender from "./components/conditionalRendering/ConditionalRender";
+import SwitchRender from "./components/conditionalRendering/SwitchRender";
+import TernaryRender from "./components/conditionalRendering/TernaryRender";
+// import Navbar from './components/propsDrilling/Navbar';
+// import ChildToParent from './components/props/ChildToParent'
+// import ListsProducts from "./components/product/ListsProducts";
+// import Products from "./components/Products.json";
+// import Props from "./components/PropsType/Props";
+// import EventHandling from './components/syntheticEvents/EventHandling';
+// import EventHandlingClass from "./components/syntheticEvents/EventHandlingClass";
+// import FormEvent from './components/syntheticEvents/FormEvent';
+// import PassingArguments from "./components/syntheticEvents/PassingArguments";
+
+const App = () => {
+  let [isLoggedIn, setIsLoggedIn] = useState(false);
+  // let [state, setState] = useState("Diwakar");
+  // let [products, setProducts] = useState(Products);
+
+  // Example for sending data from child to parent
+
+  // let [name, setName] = useState("Gaurav")
+  // let someFunc = (name) => {
+  //   setName(name)
+  // }
+  return (
+    <div>
+      {/* Example for sending data from child to parent */}
+      {/* <ChildToParent someFunc={someFunc} />
+      <p>{name}</p> */}
+
+      {/* <Navbar state={ state} /> */}
+
+      {/* <ListsProducts products={ products } /> */}
+
+      {/* <Props str="Rahul" salary={ 1000 } /> */}
+
+      {/* <EventHandling /> */}
+      {/* <EventHandlingClass/> */}
+
+      {/* <FormEvent/> */}
+
+      {/* <PassingArguments/> */}
+
+      <ConditionalRender isAuth={{isLoggedIn, setIsLoggedIn}} />
+      <TernaryRender isAuth={{ isLoggedIn }} />
+      <SwitchRender isAuth={{isLoggedIn}} />
+    </div>
+  );
+};
+
+export default App;

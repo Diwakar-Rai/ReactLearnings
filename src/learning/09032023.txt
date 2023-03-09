@@ -1,0 +1,28 @@
+import React from "react";
+// import Forms from "./Refs/Forms";
+import "../src/global.css";
+import FirstControlledFunc from "./Refs/FirstControlledFunc";
+import SecondControlledFunc from "./Refs/SecondControlledFunc";
+// import ControlledClass from "./Refs/ControlledClass";
+// import Video from "./Refs/Video";
+// import ClassRef from "./Refs/ClassRef";
+// import FunctionRef from './Refs/FunctionRef';
+// import UseRef from "./Refs/UseRef";
+
+const App = () => {
+  return (
+    <section className="mainBlock">
+      {/* <ClassRef />
+      <FunctionRef />
+      <UseRef/> */}
+
+      {/* <Video/> */}
+      {/* <Forms /> */}
+      {/* <ControlledClass/> */}
+      <FirstControlledFunc />
+      <SecondControlledFunc />
+    </section>
+  );
+};
+
+export default App;
