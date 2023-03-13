@@ -1,15 +1,17 @@
 import React from "react";
-import Count from "./contextApi/Count";
+// import Count from "./contextApi/Count";
 // import ControlledComponentPrac from "./Refs/ControlledComponentPrac";
-import CounterProvider from "./contextApi/CounterContextApi";
-import './global.css'
+// import CounterProvider from "./contextApi/CounterContextApi";
+import "./global.css";
+import Inner from "./HOC/Inner";
 const App = () => {
   return (
     <>
-      {/* <ControlledComponentPrac/> */}
+      {/* <ControlledComponentPrac/>
       <CounterProvider>
-        <Count/>
-      </CounterProvider>
+        <Count />
+      </CounterProvider> */}
+      <Inner/>
     </>
   );
 };

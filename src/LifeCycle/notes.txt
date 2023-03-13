@@ -1,0 +1,128 @@
+Mounting Life cycle Methods 
+    
+    Constructor(props)
+        a special method that will get called whenever a new Component is created 
+        It is best place for initializing State and Binding the event handler like this keyword 
+
+      DONT DO  this is constructor  DO not cause Side effect like HTTP requests 
+
+NEXT Method 
+
+static getDerivedStateFromProps(prop, state)
+   This method rare case we are using 
+      when the state of the Component depends on changes in the props over time 
+      This is static method dont use this.state here
+      dont call ajax request here it cause Side Effect exa HTTP request
+
+
+NEXT Method 
+    render() 
+        Only Required Method in class component 
+        Read props and State anand return JSX 
+
+        Children components life cycle methods are executed 
+
+        DONT DO here 
+            do not change State or interact with DOM or make ajax calls 
+
+Next Method
+
+    componentDidMount() 
+        Invoked Immediately after a component and all its children component have been render to the DOM 
+        Its rendered only once in the DOM 
+        It is Perfect place call ajax calls  or network Calls and cause side Effect 
+        Interact with DOM and Load Data
+Life cycle Methods 
+Mounting 
+    when an instance of a component is being created and inserted into the DOM
+
+    methods and properties 
+    constructor , static getDerivedStateFromProps , render and componentDidMount
+
+updating 
+    when a component is being re-rendered as a result of changes to either its props or state 
+
+    methods and properties 
+    static getDerivedStateFromProps , shouldComponentUpdate , render , getSnapshotBeforeUpdate,
+    and componentDidUpdate
+unMounting 
+    when a component is being removed from the DOM
+
+    methods 
+        componentWillUnmount
+Error handling 
+    when there is an error during rendering , in a life cycle method ,
+    or in the constructor of any child component
+
+     methods 
+    static getDerivedStateFromError and componentDidCatch
+
+UPDATE PHASE 
+static getDerivedStateFromProps(props , state) 
+    Method is called every time a component is re-rendered
+    Set The State 
+    do not call HTTP request 
+    Rarely used Method 
+
+
+shouldComponentUpdate(nextProps , nextState)
+
+The shouldComponentUpdate(nextProps, nextState) 
+method works for both props and state. 
+
+Performance optimization
+DO not use for HTTP request
+
+This method allows your Component to 
+exit the Update
+life cycle if there is no reason
+to apply a new render.
+If you recall, React does not deeply compare props by default. 
+When props or state is updated React assumes we need to re-render the content.
+But, if the props or state have not changed, should we really be re-rendering?
+
+Preventing unnecessary renders
+
+The shouldComponentUpdate() method is the first real life cycle 
+optimization method that we can leverage in React.
+ We can look at our current and new props & state 
+ and make a choice if we should move on. 
+
+ render() Method 
+
+read Only 
+Read Props and state return JSX 
+
+getSpanShotBeforeUpdate(prevProps , prevState) 
+
+Rarely Used Method 
+called right before the changes from the 
+virtual DOM are to be reflected in the DOM
+capture some information from the DOM 
+
+method will either return null or a value 
+Returned value will be passed as the third  
+parameter to the next method 
+
+
+componentDidUpdate(prevProps , prevState , snapshot)
+
+called after the render is finished in the 
+re-render cycles 
+causes side Effect HTTP request
+
+UnMounting Phase Method 
+componentWillUnMount() 
+Method in invoked immediately before a component is 
+Unmounted and destroy
+clean up task 
+remove event handler 
+cancelling any network 
+do not call setState here 
+
+Error handling Phase Methods 
+static getDerivedStateFromError(error)
+componentDidCatch(err , info)
+
+when there is an error either during rendering in a life 
+cycle method or i the constructor of any child component

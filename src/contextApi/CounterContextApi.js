@@ -2,7 +2,6 @@ import React, { useState, createContext } from "react";
 
 export let CounterContextApi = createContext();
 
-
 const CounterProvider = ({ children }) => {
   let [count, setCount] = useState(0);
   let Increment = () => {
